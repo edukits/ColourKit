@@ -24,11 +24,23 @@ Colour& Colour::operator+=(const Colour& rhs) {
   return *this;
 }
 
+Colour Colour::operator+(const Colour& rhs) const {
+  Colour result = *this;
+  result += rhs;
+  return result;
+}
+
 Colour& Colour::operator-=(const Colour& rhs) {
   red = (red < rhs.red) ? 0 : red - rhs.red;
   green = (green < rhs.green) ? 0 : green - rhs.green;
   blue = (blue < rhs.blue) ? 0 : blue - rhs.blue;
   return *this;
+}
+
+Colour Colour::operator-(const Colour& rhs) const {
+  Colour result = *this;
+  result -= rhs;
+  return result;
 }
 
 Colour& Colour::scale(uint8_t scale) {

@@ -26,8 +26,14 @@ public:
   // Additive color blending
   Colour& operator+=(const Colour& rhs);
 
+  // Additive color blending
+  Colour operator+(const Colour& rhs) const;
+
   // Subtractive color blending
   Colour& operator-=(const Colour& rhs);
+
+  // Subtractive color blending
+  Colour operator-(const Colour& rhs) const;
 
   // Scale color by a value from 0 to 255 (8-bit scaling)
   Colour& scale(uint8_t scale);
