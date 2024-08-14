@@ -1,0 +1,19 @@
+# Classes
+Colour	    KEYWORD1
+
+# Methods and Functions
+getRed      KEYWORD2
+getGreen	KEYWORD2
+getBlue	    KEYWORD2
+setRed	    KEYWORD2
+setGreen	KEYWORD2
+setBlue	    KEYWORD2
+scale	    KEYWORD2
+lerp	    KEYWORD2
+darken	    KEYWORD2
+lighten	    KEYWORD2
+invert	    KEYWORD2
+greyscale	KEYWORD2
+writeLed	KEYWORD2
+
+# Constants (None, so far)
