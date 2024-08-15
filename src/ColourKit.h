@@ -63,4 +63,8 @@ public:
   void writeLed(byte rPin, byte gPin, byte bPin);
 };
 
+#ifdef USE_TCS34725
+#include "sensors/TCS34725.h"
+#endif
+
 #endif // COLOUR_KIT_H
