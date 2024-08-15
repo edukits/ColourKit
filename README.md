@@ -174,3 +174,35 @@ Similarly, colours can also be used directly when setting colours with FastLED.
 Colour myColour(100, 50, 25);
 leds[i] = colour;
 ```
+
+## Sensing Colour
+
+ColourKit can easily be used to store colour sensor output data.
+
+The library includes a wrapper for the TCS34725 colour sensor, requiring the [Adafruit TCS34725 library](https://github.com/adafruit/Adafruit_TCS34725).
+
+### Usage with TCS34725
+
+```cpp
+#define USE_TCS34725
+#include <ColourKit.h>
+
+Colour my_colour;
+ColourKit_TCS34725 TCS34725;
+
+void setup() {
+  Serial.begin(9600);
+  if (!TCS34725.begin()) {
+    Serial.println("Could not find a valid TCS34725 sensor, check wiring!");
+    while (1);
+  }
+}
+
+void loop() {
+  my_colour = TCS34725.getColour();
+  my_colour.writeLed(9, 10, 11);
+  delay(50);
+}
+```
+
+**Make sure to define `USE_TCS34725` before including the ColourKit library** to prevent errors during compile. You must also install the Adafruit TCS34725 library which is a dependency for this wrapper.
