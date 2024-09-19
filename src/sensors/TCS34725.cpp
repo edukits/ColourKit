@@ -1,3 +1,5 @@
+#ifdef USE_TCS34725
+
 #include "TCS34725.h"
 
 ColourKit_TCS34725::ColourKit_TCS34725() : sensor() {}
@@ -25,3 +27,5 @@ uint16_t ColourKit_TCS34725::getLux() {
     sensor.getRawData(&r, &g, &b, &c);
     return sensor.calculateLux(r, g, b);
 }
+
+#endif // USE_TCS34725

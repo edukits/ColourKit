@@ -1,6 +1,8 @@
 #ifndef COLOUR_KIT_TCS34725_H
 #define COLOUR_KIT_TCS34725_H
 
+#ifdef USE_TCS34725
+
 #include "../ColourKit.h"
 #include <Wire.h>
 #include <Adafruit_TCS34725.h>
@@ -19,5 +21,7 @@ public:
   uint16_t getColourTemp();
   uint16_t getLux();
 };
+
+#endif // USE_TCS34725
 
 #endif // COLOUR_KIT_TCS34725_H
