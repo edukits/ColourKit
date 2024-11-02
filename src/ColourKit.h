@@ -63,7 +63,8 @@ public:
   void writeLed(byte rPin, byte gPin, byte bPin);
 };
 
-#ifdef USE_TCS34725
+#if __has_include(<Adafruit_TCS34725.h>)
+#define USE_TCS34725
 #include "sensors/TCS34725.h"
 #endif
 

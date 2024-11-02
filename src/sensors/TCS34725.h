@@ -1,9 +1,10 @@
 #ifndef COLOUR_KIT_TCS34725_H
 #define COLOUR_KIT_TCS34725_H
 
+#include "../ColourKit.h"
+
 #ifdef USE_TCS34725
 
-#include "../ColourKit.h"
 #include <Wire.h>
 #include <Adafruit_TCS34725.h>
 

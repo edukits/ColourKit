@@ -184,7 +184,7 @@ The library includes a wrapper for the TCS34725 colour sensor, requiring the [Ad
 ### Usage with TCS34725
 
 ```cpp
-#define USE_TCS34725
+#include <Adafruit_TCS34725.h>
 #include <ColourKit.h>
 
 Colour my_colour;
@@ -205,4 +205,4 @@ void loop() {
 }
 ```
 
-**Make sure to define `USE_TCS34725` before including the ColourKit library** to prevent errors during compile. You must also install the Adafruit TCS34725 library which is a dependency for this wrapper.
+**Make sure to include `Adafruit_TCS34725.h` before the ColourKit library** to prevent errors during compile. The Adafruit TCS34725 library must be installed.

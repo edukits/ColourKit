@@ -1,6 +1,6 @@
-#ifdef USE_TCS34725
-
 #include "TCS34725.h"
+
+#ifdef USE_TCS34725
 
 ColourKit_TCS34725::ColourKit_TCS34725() : sensor() {}
 
